@@ -1,0 +1,30 @@
+<div fxLayout="row wrap" fxLayoutGap="1rem" fxFlexAlign="center">
+    <div fxFlex="95">
+        <h2 mat-dialog-title>Desalle usuario {{data.id}}</h2>
+    </div>
+</div>
+<div fxLayout="row wrap" fxLayoutGap="1rem" fxFlexAlign="center">
+    <div fxFlex="45" fxFlex.sm="95" fxFlex.xs="95">
+        <img [src]="data.avatar === '' || data.avatar === null ? '/assets/image/usuarioNuevo.png' : data.avatar"
+            style="width: 100%;">
+    </div>
+    <div fxFlex="50" fxFlex.sm="95" fxFlex.xs="95">
+        <div style="width: 100%;">
+            <label><b>Nombre:</b> {{data.first_name}}</label>
+        </div>
+        <div style="width: 100%;">
+
+            <label><b>Apellido:</b> {{data.last_name}}</label>
+        </div>
+        <div style="width: 100%;">
+            <label><b>Correo:</b> {{data.email}}</label>
+        </div>
+    </div>
+</div>
+<div fxLayout="row wrap" fxLayoutGap="1rem" fxFlexAlign="center">
+    <div fxFlex="95">
+        <div mat-dialog-actions>
+            <button mat-button mat-dialog-close>Cerrar</button>
+        </div>
+    </div>
+</div>

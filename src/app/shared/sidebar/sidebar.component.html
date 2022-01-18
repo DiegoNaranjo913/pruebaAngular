@@ -1,0 +1,27 @@
+<mat-toolbar>
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+        <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+    Usuarios Crud
+</mat-toolbar>
+
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav="matSidenav">
+        <button mat-button class="menu-button" routerLink="/usuarios" (click)="verificarToggle()"
+            routerLinkActive="active-link">
+            <mat-icon class="icon-menu">supervisor_account</mat-icon>
+            <span>Usuarios</span>
+        </button>
+        <mat-divider></mat-divider>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4">
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

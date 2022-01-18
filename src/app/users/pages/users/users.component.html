@@ -1,0 +1,10 @@
+<div fxLayout="row wrap" fxLayoutGap="1rem" fxFlexAlign="center">
+    <div fxFlex="35" fxFlex.sm="95" fxFlex.xs="95">
+        <app-form [myForm]="userSelected" (mensaje)="openSnackBar($event)" (actualizar)="actualizarTabla($event)">
+        </app-form>
+    </div>
+    <div fxFlex="60" fxFlex.sm="95" fxFlex.xs="95">
+        <app-table (editarFormulario)="editar($event)" (mensaje2)="openSnackBar($event)" [actualizar]="userChange">
+        </app-table>
+    </div>
+</div>
